@@ -20,17 +20,19 @@ Route::get('age/{edad?}','BasicController@age');
 });*/
 Route::get('name/{nombre}','BasicController@name')->name('nombre');
 // Generating URLs...
-//$url = route('nam');
+//Route::resource('rest', 'RestController');
+//Route::match(['get','post'],'/res', 'RestController');
 
 // Generating Redirects...
 //return redirect()->route('profile');
-//Route::get('/',['as'=> 'nombre','uses'=> 'TestController@test']);
 
-Route::post('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-   // Route::resource();
+});*/
 
-});
+
+//Route::match(['get','post'] ,'rest', 'RestController');
+Route::match(['get', 'post'], 'res', 'RestController@store');
 
 
 
