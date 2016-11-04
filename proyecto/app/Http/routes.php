@@ -29,6 +29,9 @@ Route::get('name/{nombre}','BasicController@name');
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('layout',function(){
+	return view('layouts.home');
+});
 
 
 //Route::match(['get','post'] ,'rest', 'RestController');
