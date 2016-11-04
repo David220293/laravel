@@ -10,15 +10,15 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/prueba', function(){
-	return "Hola";
+Route::get('/error', function(){
+	return "Edad invalida";
 });
 
-Route::get('age/{edad?}','BasicController@age');
+Route::get('age/{edad?}','BasicController@age')->middleware('vAge');
 /*Route::post('/post',function(){
 	return "post";
 });*/
-Route::get('name/{nombre}','BasicController@name')->name('nombre');
+Route::get('name/{nombre}','BasicController@name');
 // Generating URLs...
 //Route::resource('rest', 'RestController');
 //Route::match(['get','post'],'/res', 'RestController');
@@ -26,9 +26,9 @@ Route::get('name/{nombre}','BasicController@name')->name('nombre');
 // Generating Redirects...
 //return redirect()->route('profile');
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
-});*/
+});
 
 
 //Route::match(['get','post'] ,'rest', 'RestController');

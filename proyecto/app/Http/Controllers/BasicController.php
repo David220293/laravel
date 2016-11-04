@@ -8,6 +8,7 @@ use proyecto\Http\Requests;
 
 class BasicController extends Controller
 {
+   
     
     public function age($age = null){
     	if ($age != null) {
