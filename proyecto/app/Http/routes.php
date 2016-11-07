@@ -29,13 +29,11 @@ Route::get('name/{nombre}','BasicController@name');
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('layout',function(){
-	return view('layouts.home');
-});
+Route::get('layout','BasicController@fecha');
 
-Route::get('partial',function(){
+/*Route::get('partial',function(){
 	return view('partial.left');
-});
+});*/
 
 
 //Route::match(['get','post'] ,'rest', 'RestController');

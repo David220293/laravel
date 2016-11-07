@@ -23,4 +23,11 @@ class BasicController extends Controller
     public function name($name){
     	return "Tu nombre es: ".$name;
     }
+
+    public function fecha(){
+        $fecha = date("Y-m-d");
+        return view('layouts.home', ['fecha' =>$fecha]);
+    }
+
+    
 }
