@@ -4,8 +4,9 @@
 	@include('layouts.head')
 </head>
 <body>
-<div class="col-md-6 ">
 	@include('layouts.nav')
+
+<div class="col-md-6 ">
 	@include('partial.left')
 </div>
 <div class="col-md-6 ">
