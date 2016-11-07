@@ -6,6 +6,7 @@
 <body>
 <div>
 	@include('layouts.nav')
+	@include('partial.left')
 </div>
 <div>
 	@include('layouts.footer')

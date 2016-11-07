@@ -8,13 +8,18 @@ body {
     padding-top: 100px;
 }
 footer {
-    margin-top: 500px;
+    margin-top: 150px;
     padding: 30px 30px;
 }
 
 /*
  * Custom styles
  */
+
+ img{
+    width: 150px;
+    height: 150px;
+ }
 .navbar-brand {
     font-size: 24px;
 }

@@ -33,6 +33,10 @@ Route::get('layout',function(){
 	return view('layouts.home');
 });
 
+Route::get('partial',function(){
+	return view('partial.left');
+});
+
 
 //Route::match(['get','post'] ,'rest', 'RestController');
 Route::match(['get', 'post'], 'res', 'RestController@store');
