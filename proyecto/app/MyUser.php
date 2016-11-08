@@ -6,11 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class MyUser extends Model
 {
-	private function insert($data){
+	protected $table = 'my_users';
 
-		    DB::table('my_users')->insert($data);
-
-	}
 
 	
 }
