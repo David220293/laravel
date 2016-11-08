@@ -13,7 +13,7 @@ class CreateMyUsersHobbiesTable extends Migration
     public function up()
     {
         
- Schema::create('userHobbies', function (Blueprint $table) {
+ Schema::create('user_hobbies', function (Blueprint $table) {
             $table->increments('id')->unsigned();
             $table->string('nombre');
             $table->string('tipo');
@@ -28,6 +28,6 @@ class CreateMyUsersHobbiesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('userHobbies');
+        Schema::drop('user_hobbies');
     }
 }

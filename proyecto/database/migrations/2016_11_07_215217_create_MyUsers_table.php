@@ -12,13 +12,13 @@ class CreateMyUsersTable extends Migration
      */
     public function up()
     {
-         Schema::create('MyUsers', function (Blueprint $table) {
+         Schema::create('my_users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
             $table->integer('id_hobbies')->unsigned();
-            $table->foreign('id_hobbies')->references('id')->on('userHobbies');
+            $table->foreign('id_hobbies')->references('id')->on('user_hobbies');
         });
     }
 
@@ -29,6 +29,6 @@ class CreateMyUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('MyUsers');
+        Schema::drop('my_users');
     }
 }

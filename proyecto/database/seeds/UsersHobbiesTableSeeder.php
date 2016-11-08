@@ -1,5 +1,5 @@
 <?php
-
+use proyecto\UserHobbies;
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
 
@@ -12,14 +12,15 @@ class UsersHobbiesTableSeeder extends Seeder
      */
     public function run()
     {
-    	 $faker = Faker::create();
+    	$users = new UserHobbies;
+        $faker = Faker::create();
         foreach (range(1,5) as $index ) {
-         DB::table('userHobbies')->insert(
-        	[
+        	$data = array([
         	 'nombre' => $faker->word,
         	 'tipo' => $faker->word,
         	
         	]);
-     }
+        	$users::insert($data);
+     	}
     }
 }
