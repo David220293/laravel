@@ -17,7 +17,6 @@ class CreateMyUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->timestamps();
             $table->integer('id_hobbies')->unsigned();
             $table->foreign('id_hobbies')->references('id')->on('userHobbies');
         });
