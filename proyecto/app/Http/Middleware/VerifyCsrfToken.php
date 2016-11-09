@@ -1,6 +1,6 @@
 <?php
 
-namespace proyecto\Http\Middleware;
+namespace app\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
 

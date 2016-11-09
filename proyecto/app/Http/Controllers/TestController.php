@@ -1,10 +1,10 @@
 <?php
 
-namespace proyecto\Http\Controllers;
+namespace app\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use proyecto\Http\Requests;
+use app\Http\Requests;
 
 class TestController extends Controller
 {

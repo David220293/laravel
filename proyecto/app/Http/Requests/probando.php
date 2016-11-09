@@ -1,8 +1,8 @@
 <?php
 
-namespace proyecto\Http\Requests;
+namespace app\Http\Requests;
 
-use proyecto\Http\Requests\Request;
+use app\Http\Requests\Request;
 
 class probando extends Request
 {

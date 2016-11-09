@@ -10,6 +10,9 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('/api/users', ['middleware' => 'api', function () {
+    return "hola";
+}]);
 Route::get('/error', function(){
 	return "Edad invalida";
 });
@@ -42,3 +45,9 @@ Route::match(['get', 'post'], 'res', 'RestController@store');
 
 
 
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
+//Route::post('/register' 'AuthController@create');

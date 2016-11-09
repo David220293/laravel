@@ -1,9 +1,7 @@
 <?php
-
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-
-class CreateMyUsersHobbiesTable extends Migration
+class CreatePasswordResetsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,15 +10,12 @@ class CreateMyUsersHobbiesTable extends Migration
      */
     public function up()
     {
-        
- Schema::create('user_hobbies', function (Blueprint $table) {
-            $table->increments('id')->unsigned();
-            $table->string('nombre');
-            $table->string('tipo');
+        Schema::create('password_resets', function (Blueprint $table) {
+            $table->string('email')->index();
+            $table->string('token')->index();
+            $table->timestamp('created_at');
         });
-
     }
-
     /**
      * Reverse the migrations.
      *
@@ -28,6 +23,6 @@ class CreateMyUsersHobbiesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('user_hobbies');
+        Schema::drop('password_resets');
     }
 }
